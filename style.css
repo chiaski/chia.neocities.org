@@ -1,9 +1,223 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
+#rainbow {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: multiply;
+}
+
+#rainbow img {
+  padding: 2em;
+  max-width: 100%;
+  box-sizing: border-box;
+}
 
 body {
-  background-color: white;
-  color: black;
-  font-family: Verdana;
+  background: #fff;
+  color: #33343b;
+  margin: 0;
 }
+
+section#fullscroll {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+section#fullscroll section._cols {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 100px;
+}
+section#fullscroll .col {
+  width: 50%;
+  height: calc(100vh - 100px);
+  overflow-y: scroll;
+}
+section#fullscroll .col#gdoc {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+}
+section#fullscroll .col#gdoc .gdoc-color {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: red;
+  mix-blend-mode: screen;
+  z-index: 99;
+  transition: all 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  opacity: 0.4s;
+}
+section#fullscroll .col#gdoc iframe {
+  width: 100%;
+  height: 100vh;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  mix-blend-mode: darken;
+  background: #f1f5f5;
+}
+section#fullscroll .rainbow {
+  position: absolute;
+  top: 0;
+  display: block;
+  height: 100px;
+  width: 100vw;
+  overflow-y: hidden;
+  margin: 0;
+}
+section#fullscroll .rainbow .inner {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(180deg, deeppink 0%, red 2%, darkorange 5%, yellow 9%, lime 12%, springgreen 14%, aqua 17%, royalblue 21%, #7064b4 22%, orchid 25%, fuchsia 28%, deeppink 31%, deeppink 100%);
+}
+
+section#info p {
+  font-size: 2.25em;
+  letter-spacing: -0.25px;
+  text-align: left;
+  text-indent: 5vw;
+  padding: 0 1em;
+}
+
+#header {
+  border-bottom: 1px solid #33343b;
+  padding-bottom: 0.5em;
+  font-size: 0.9em;
+  display: flex;
+}
+
+#header ._r {
+  padding: 0 1em;
+}
+
+#header ._r:not(:last-of-type) {
+  border-right: 1px solid #33343b;
+}
+
+#header ._r:first-of-type {
+  padding-left: 0;
+}
+
+#header .subtitle {
+  font-size: 0.8em;
+  display: block;
+}
+
+#header p {
+  margin: 0;
+}
+
+#header ._a {
+  max-width: 420px;
+  border-right: 1px solid #33343b;
+}
+
+table {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  font-size: 0.8em;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+td,
+th {
+  padding: 0.25em;
+  border: 1px solid #000;
+}
+
+li {
+  font-size: 0.8em;
+  width: 80vw;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+#what a {
+  text-decoration: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  border-radius: 12px;
+  text-align: center;
+  color: deeppink;
+  padding: 0.75em;
+  margin: 0.5em 0;
+  box-shadow: 0 0 60px deeppink;
+  text-shadow: 0 0 20px deeppink;
+  transition: all 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+#what a:hover {
+  background: #f1f5f5;
+  color: #ffffff;
+  transform: translateY(-4px);
+}
+#what h2,
+#what h3 {
+  font-weight: 200;
+  display: inline-block;
+  margin: 0.5em auto;
+  text-align: center;
+}
+#what h2 {
+  font-size: 1.5em;
+}
+#what h3 {
+  font-size: 1.5em;
+}
+#what a:hover h2 {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+._link {
+  display: inline-block;
+  font-size: 0.6em;
+}
+
+._link p {
+  margin: 0;
+  font-size: 0.8em;
+}
+
+#me {
+  font-size: 2em;
+  letter-spacing: -1.2px;
+  transform: rotate(-2deg);
+  margin: 0 auto;
+  text-align: center;
+}
+
+#what {
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: -0.5px;
+  text-align: center;
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+
+.social {
+  font-size: 0.8em;
+}
+
+.social h2 {
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */
