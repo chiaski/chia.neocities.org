@@ -1,11 +1,13 @@
 #rainbow {
   width: 100vw;
   height: 100vh;
+  top: 50vh;
   object-fit: contain;
   position: fixed;
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: multiply;
+  display: none;
 }
 
 #rainbow img {
@@ -51,9 +53,9 @@ section#fullscroll .col#gdoc .gdoc-color {
   height: 100%;
   background: red;
   mix-blend-mode: screen;
+  opacity: 1;
   z-index: 99;
   transition: all 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
-  opacity: 0.4s;
 }
 section#fullscroll .col#gdoc iframe {
   width: 100%;
@@ -68,13 +70,17 @@ section#fullscroll .col#gdoc iframe {
 section#fullscroll .rainbow {
   position: absolute;
   top: 0;
+}
+
+.rainbow {
   display: block;
   height: 100px;
   width: 100vw;
   overflow-y: hidden;
+  position: relative;
   margin: 0;
 }
-section#fullscroll .rainbow .inner {
+.rainbow .inner {
   display: block;
   margin: 0;
   padding: 0;
@@ -83,8 +89,17 @@ section#fullscroll .rainbow .inner {
   background: linear-gradient(180deg, deeppink 0%, red 2%, darkorange 5%, yellow 9%, lime 12%, springgreen 14%, aqua 17%, royalblue 21%, #7064b4 22%, orchid 25%, fuchsia 28%, deeppink 31%, deeppink 100%);
 }
 
+section#info input, section#info select {
+  font-size: 1.25em;
+  display: inline-block;
+  font-family: "Times New Roman";
+  width: 100px;
+}
+section#info select {
+  width: auto;
+}
 section#info p {
-  font-size: 2.25em;
+  font-size: 1.75em;
   letter-spacing: -0.25px;
   text-align: left;
   text-indent: 5vw;
@@ -190,14 +205,6 @@ li {
 ._link p {
   margin: 0;
   font-size: 0.8em;
-}
-
-#me {
-  font-size: 2em;
-  letter-spacing: -1.2px;
-  transform: rotate(-2deg);
-  margin: 0 auto;
-  text-align: center;
 }
 
 #what {

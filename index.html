@@ -110,35 +110,31 @@
     
     
     
+    <div class="rainbow">
+      <div class="inner"></div>
+    </div>
+    
     
     <div id="header">
+      
       
       <div class="_a _r">
     <p>Chia explores the poetic potential of the web, worlds, & worlding by the systems they shape them.</p>
         </div>
       
-      <div class="_r">
-<span class="subtitle">Last Updated</span>
-        9:53AM
-      </div>
-      
-      <div class="_r">
-<span class="subtitle">Last Updated</span>
-        9:53AM
-      </div>
     
     </div>
   
-  <center><p>welcome to chia's webpage!</p></center>
-    
-    <div id="me">_(:3 」∠)_</div>
-    <br>
-    
     
    <section id="info"> 
     <div class="_info">
+      <p><input type="text" placeholder="Chia"> is a <select onchange="changedesc()"><option>designer</option><option>browser poet</option><option>namer</option><option>community organizer</option><option>net artist</option><option>writer</option><option>field recordist</option><option>label owner</option></select>.</p>
+      
+      <p class="_continue"></p>
+      
     <h1>Q: Where are you?<h1>
       <p>Chia is currently in New Haven, Connecticut. They frequently travel across the northeast to see shows and friends. If you are in the greater New York area/New Haven, feel free to reach out!<br>In early September, they will participate in a sound art residency in the woods of Washington. In late September, they will move to San Francisco.</p>
+      
       
       </div>
       
@@ -232,6 +228,50 @@
         
       });
         })
+      
+      function changedesc(){
+        
+        let what = $("._info select").find(":selected").text();
+      
+        
+        switch(what){
+            
+          case "designer":
+            $("p._continue").append("<span style='color:red'>Currently, they are making fun little collaborations with friends and run a little studio practice focused on building poetic experiences for the browser and meaningful personal archives at <a href='https://websiteweb.site'>websiteweb.site</a>; you can ask for a website at <a href='mailto:website@websiteweb.site'>website@websiteweb.site</a>. They like to design tiny websites, tools, and printed matter. Soon, they hope to start publishing under their label/press, maybe...<br>They are also an incoming Product Designer at <a href='https://figma.com'>Figma</a> in SF, excited to think about how to design tools that make the act of creation distributed and truly ubiquituous. For their thesis, they built and designed <a href='https://engine.lol'>Engine.lol</a>, a tiny gamemaking tool (that they're still slowly working on...).</span> "); 
+            break;
+            
+          case "browser poet":
+            $("p._continue").append("<span style='color:darkorange'>What is the poetic potential of the browser? How can the browser and the website be seen as a creative canvas and medium of expression, reclaimed as a site of our own personal experience rather than the utilitarian website today? Chia likes playing with </span> "); 
+            break;
+            
+          case "namer":
+            $("p._continue").append("<span style='color:yellow'>When things are named, they become more legible and magical</span>. To name, one must be a good and rich witness towards the world. When you name and know of enough things, perhaps you can apply it to a world of your own."); 
+            break;
+            
+          case "community organizer":
+            $("p._continue").append("<span style='color:springgreen'>They've been gathering people together When things are named, they become more legible and magical</span>. To name, one must be a good and rich witness towards the world. When you name and know of enough things, perhaps you can apply it to a world of your own."); 
+            break;
+            
+          case "net artist":
+            $("p._continue").append("<span style='color:aqua'>They've been gathering people together When things are named, they become more legible and magical</span>. To name, one must be a good and rich witness towards the world. When you name and know of enough things, perhaps you can apply it to a world of your own."); 
+            break;
+            
+          case "writer":
+            $("p._continue").append("<span style='color:mediumslateblue'>Does a writer have to be published or anything to matter? I've said words that may have meant something, at one point in time or another. </span>"); 
+            break;
+            
+          case "field recordist":
+            $("p._continue").append("<span style='color:orchid'>Torrenting/ripping and going out into the world to fetch resources that might help other people are the only activities that bring me joy these days. With my Tascam DR40x, Sony PCMD100, and an assortment of capsule mics — I like to go out into the world and sit still somewhere as I listen... I'm interested in creating archives of natural sound, making ambient music, and understanding the ways that people listen.</span>"); 
+            break;
+            
+          case "label owner":
+            $("p._continue").append("<span style='color:magenta'>Nothing huge, just releasing music and art and contributing to culture with a voice and vision from the people I love.</span>"); 
+            break;
+            
+            
+        }
+        
+      }
       
     </script>
     
