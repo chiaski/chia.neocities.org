@@ -19,9 +19,10 @@
   </div>
 
   <div class="dark"></div>
+  <div class="rainbow"></div>
   <div class="bg"></div>
 
-    <img src="notfound.png" id="NOTFOUND">
+<!--    <img src="notfound.png" id="NOTFOUND">-->
 
   <section id="hi">
 
@@ -34,7 +35,7 @@
           <td class="_neocities _domain"><a href="https://chia.neocities.org" target="_blank" data-desc="Hello. You are here, presumably...">chia.neocities.org</a>
           </td>
           <td></td>
-        </tr>
+        </tr>  
         <tr class="_url">
           <td class="_www">www.</td>
           <td id="_website">chia.neocities.org</td>
@@ -49,11 +50,12 @@
           <td class="_domain">
             <a href="https://ifyouknewmewouldyoulove.me" target="_blank" data-desc="Net art and full index of my practice.">ifyouknewmewouldyoulove.me</a>
             <a href="https://docs.google.com/spreadsheets/d/1LHwJt8JKIEllYm9tnJpXrnn6gf6owJtotgFXkLwNFKE/edit?usp=sharing" target="_blank" data-desc="My selected works, trying to remember everything I've done">docs.google.com</a>
-            <a href="https://docs.google.com/spreadsheets/d/1LHwJt8JKIEllYm9tnJpXrnn6gf6owJtotgFXkLwNFKE/edit?usp=sharing" target="_blank" data-desc="My selected works, trying to remember everything I've done">chias.blog</a>
+            <a href="https://chias.blog" target="_blank" data-desc="Journaling, writing about life, announcing little mundane things... at least once a month for years and years...">chias.blog</a>
             <a href="https://chia.design" target="_blank" data-desc="Design practice, work history, and more.">chia.design</a>
             <a href="https://developh.org" target="_blank" data-desc="Critical technology institute & community based in the Philippines">developh.org</a>
             <a href="https://engine.lol" target="_blank" data-desc="A tiny game engine for weird point-and-click games.">engine.lol</a>
             <a href="https://cloudy.country" target="_blank" data-desc="My newsletter where I send out pictures of clouds infrequently">cloudy.country</a>
+            <a href="https://hotemogf.com" target="_blank" data-desc="A more loose journal than chias.blog">hotemogf.com</a>
 
 
             <a class="_unavailable" data-desc="My forum."><s>cloudy.freeforums.net</s></a>
@@ -68,7 +70,7 @@
             <a href="https://are.na/chia" target="_blank" data-desc="Where I tend to collect things. A lot of things." data-user="chia">are.na</a>
             <a href="https://twitter.com/hotemogf" target="_blank" data-desc="Tweets." data-user="hotemogf">twitter.com</a>
             <a href="https://chi.itch.io" target="_blank" data-desc="My little games." data-user="chi">itch.io</a>
-            <a href="https://chi.itch.io" target="_blank" data-desc="My music collection." data-user="chiaski">bandcamp</a>
+            <a href="https://bandcamp.com/chiaski" target="_blank" data-desc="My music collection." data-user="chiaski">bandcamp.com</a>
             <a href="https://github.com/chiaski" target="_blank" data-desc="Where I tend to collect things. A lot of things." data-user="chiaski">github.com</a>
             <a href="https://instagram.com/hotemogf" target="_blank" data-desc="Tweets." data-user="hotemogf">instagram.com</a>
             <a href="https://en.wikipedia.org/wiki/User:Chiaski" target="_blank" data-desc="Wikipedia." data-user="User:Chiaski">wikipedia.org</a>
@@ -88,7 +90,7 @@
     </div>
 
     <div id="links">
-      <div class="_link">
+      <div class="_link" style="padding-right: 4em;">
         <strong>Actions</strong>
         <a href="mailto:hotemogirlfriend@gmail.com">Email</a>
         <a onclick="alert('Sorry, you\'re already doing that.');">Destroy</a>
@@ -155,6 +157,17 @@
     </div>
       </section>
 -->
+    
+    <div class="spacer" style="height:10vh;" ></div>
+    
+    <h1>News from me</h1>
+    <p>If you would like to get occasional updates from me, I have a Tinyletter.</p>
+          <div class="newsletter">
+            <form action="https://tinyletter.com/weeaboo" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/weeaboo', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+              <input type="text" style="width:176px" name="email" placeholder="Let me email you?" id="tlemail" />
+              <input type="hidden" value="1" name="embed" /><input type="submit" value="Subscribe" />
+            </form>
+          </div>
     
     <div class="spacer" style="height:10vh;" id="everythingiveloved" name="everythingiveloved"></div>
     
@@ -239,13 +252,13 @@
       <li>Make a web framework (and potentially engine?) for Pacthesis-like dating simulators.</li>
       <li>Know myself.</li>
     </ol>
-    <div class="spacer"></div>
+    <div class="spacer" style="height:10vh;" ></div>
     
     <h1>What I'm thinking about</h1>
     <p>A collection of links and oddities...</p>
     <ol>
       <li><a href="https://wordobject.wordpress.com/2015/06/26/text-su-huis-matrix-poem-star-gauge/" target="_blank">Star Gauge</a>, the poem by 4th century poet Su Hui in the form of a 29 by 29 grid of characters that can be read in at least 3,000 different ways.</li>
-      <li>Panda Bear's upcoming album with Sonic Bom...</li>
+      <li>Panda Bear's upcoming album with Sonic Boom...</li>
       <li>Monome products, the Lines community, and development.</li>
       <li>Going on a field recording trip in the woods.</li>
       <li>Tan Lin's <a href="https://rhizome.org/editorial/2012/oct/24/interview-tan-lin/" target="_blank">poetics</a>.</li>
@@ -290,23 +303,24 @@
         if( $(this).text() == "chia.neocities.org" ){
           
           $("td._neocities").css("opacity", 0);
-          $("._pages").fadeIn();
+          $("._pages").fadeIn(200);
           
         } else{
           $("._pages").fadeOut();$("td#_indexhtml").text("/index.html");
         }
         
+        setTimeout(() => {
+          
         // has a username
         if( $(this).attr("data-user") ){
           $("td#_indexhtml").text("/" +  $(this).attr("data-user") ).css("opacity", 1);
         } else{ $("td#_indexhtml").text("/index.html");
         }
 
-        setTimeout(() => {
           
           $("#say_what").text(t).css("opacity", 0.7); $("td#_website").text(d).css("opacity", 1);
 
-        }, 700);
+        }, 20);
 
       } else if ( $(this).parents('._pages').length ){
         
@@ -317,7 +331,7 @@
         setTimeout(() => {
           $("#say_what").text(t).css("opacity", 0.7);
          $("td#_indexhtml").text(d).css("opacity", 1);
-        }, 700);
+        }, 20);
       }
     });
     
@@ -333,32 +347,36 @@
 
 
     function time(what) {
-
-      $(".dark").fadeOut();
+            $(".dark").css("opacity", 0);
+            $(".rainbow").css("opacity", 1);
 
       setTimeout(() => {
 
         switch (what) {
           case "abyss":
             $("body").css("background", "#ffffff");
+            $(".rainbow").css("opacity", 0);
 
             break;
 
           case "dusk":
-            $(".dark").toggle(3000);
+            $(".rainbow").css("opacity", 0);
+            $(".dark").css("opacity", 1);
             break;
 
           case "sunset":
-            $("body").css("background", "linear-gradient(90deg, rgba(223,221,141,1) 0%, rgba(224,164,130,1) 50%, rgba(233,123,174,1) 100%)").fadeIn(3000);
+            $(".rainbow").css("opacity", 0);
+            $("body").css("background", "linear-gradient(90deg, rgba(223,221,141,1) 0%, rgba(224,164,130,1) 50%, rgba(233,123,174,1) 100%)").fadeIn(2000);
             break;
 
           case "rain":
+            $(".rainbow").css("opacity", 0);
             $("body").css("background", "linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 1) 8%, rgba(208, 222, 33, 1) 16%, rgba(79, 220, 74, 1) 24%, rgba(63, 218, 216, 1) 32%, rgba(47, 201, 226, 1) 40%, rgba(28, 127, 238, 1) 48%, rgba(95, 21, 242, 1) 56%, rgba(186, 12, 248, 1) 64%, rgba(251, 7, 217, 1) 72%, rgba(255, 0, 0, 1) 88%, rgba(255, 0, 0, 1) 100%)");
             break;
         }
 
 
-      }, 1500);
+      }, 500);
 
     }
 

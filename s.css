@@ -81,7 +81,7 @@ p {
 
 body {
   box-sizing: border-box;
-  padding: 1.5em;
+  padding: 3em;
   color: #17171a;
   font-family: "Standard";
   font-size: 0.85em;
@@ -90,13 +90,13 @@ body {
 }
 @media screen and (max-width: 800px) {
   body {
+    padding: 1.5em;
     font-size: 0.8em;
   }
 }
 
 main {
   max-width: 85vw;
-  width: 800px;
   z-index: 9;
 }
 main p {
@@ -108,7 +108,6 @@ main strong {
 }
 
 a {
-  transition: all 0.2s cubic-bezier(0.17, 0.67, 0.64, 0.25);
   text-decoration: none;
   color: blue;
   opacity: 0.6;
@@ -123,7 +122,7 @@ a:hover {
   display: flex;
   align-items: center;
   min-height: 100vh;
-  padding-bottom: 120px;
+  padding-bottom: 20vh;
   box-sizing: border-box;
 }
 #hi #url {
@@ -143,7 +142,7 @@ a:hover {
 }
 #hi #url td {
   margin: 0;
-  transition: all 0.4s cubic-bezier(0.17, 0.67, 0.64, 0.25);
+  transition: opacity 0.4s cubic-bezier(0.17, 0.67, 0.64, 0.25);
 }
 #hi #url td._domain {
   min-width: 190px;
@@ -176,14 +175,13 @@ a:hover {
 }
 #hi #url td._neocities {
   opacity: 0;
-  transition: all 0.9s cubic-bezier(0.17, 0.67, 0.64, 0.25);
-  transition-delay: 0.5s;
+  transition: all 0.4s cubic-bezier(0.17, 0.67, 0.64, 0.25);
+  transition-delay: 0.3s;
 }
 #hi #url a {
   color: #DF7EEA;
   text-decoration: none;
   opacity: 1;
-  text-shadow: 0 0 8px #DF7EEA;
   line-height: 140%;
   transition: all 0.3s cubic-bezier(0.17, 0.67, 0.64, 0.25);
 }
@@ -200,17 +198,23 @@ a:hover {
   color: gray;
 }
 @media screen and (max-width: 800px) {
+  #hi {
+    align-items: flex-start;
+  }
   #hi td {
     font-size: 0.9em;
+  }
+  #hi td a {
+    margin-bottom: 0.25em;
   }
   #hi td._www {
     display: none;
   }
   #hi td#_website {
-    padding-right: 1em;
+    padding-right: 1.25em;
   }
   #hi #url tr._url {
-    font-size: 1.6em;
+    font-size: 1.4em;
   }
 }
 
@@ -219,12 +223,15 @@ a:hover {
   height: 25vh;
 }
 
+#p {
+  max-width: 80vw;
+}
 #p a {
   display: inline-block;
   width: 240px;
   transition: all 1.2s cubic-bezier(0.17, 0.67, 0.64, 0.25);
-  margin-right: 0.5em;
-  margin-bottom: 0.5em;
+  margin: 1em 0;
+  margin-right: 1.75em;
 }
 #p a strong {
   font-weight: normal;
@@ -263,12 +270,18 @@ h1 {
   line-height: 100%;
   letter-spacing: -1.5px;
   display: inline-block;
+  margin-left: -0.05em;
 }
 
 p {
   opacity: 0.8;
   margin: 1em 0;
   line-height: 140%;
+}
+
+ol, ul {
+  padding: 0.25em 0.75em;
+  opacity: 0.8;
 }
 
 li {
@@ -311,6 +324,25 @@ table.love p {
   max-width: 50%;
 }
 
+.newsletter input {
+  padding: 0.25em;
+  background: transparent;
+  border: 1px solid #17171a;
+  font-family: "Standard";
+  letter-spacing: -0.25px;
+}
+.newsletter input[type=submit] {
+  cursor: pointer;
+  transition: all linear 0.2s;
+}
+.newsletter input[type=submit]:hover {
+  opacity: 0.8;
+  background: blue;
+  border: blue 1px solid;
+  box-shadow: 0 0 8px blue;
+  color: #fff;
+}
+
 #love {
   display: flex;
   flex-wrap: wrap;
@@ -331,12 +363,12 @@ table.love p {
 }
 
 #links {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100vw;
   box-sizing: border-box;
-  padding: 2em;
+  padding: 3em;
   display: flex;
 }
 #links strong {
@@ -381,7 +413,7 @@ table.love p {
     box-sizing: border-box;
     padding: 2em;
     margin: 0;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   #links ._link {
     padding-right: 10px;
@@ -398,7 +430,7 @@ table.love p {
 
 .bg {
   position: fixed;
-  height: 100vh;
+  height: 150vh;
   width: 100vw;
   top: 0;
   left: 0;
@@ -418,29 +450,32 @@ table.love p {
 }
 
 .dark {
+  position: fixed;
   top: 0;
   left: 0;
-  position: fixed;
   width: 100%;
   height: 100%;
   background: #121212;
   z-index: 999;
   pointer-events: none;
   mix-blend-mode: color;
-  display: none;
   transition: opacity linear 0.4s;
+  opacity: 0;
 }
 
 .rainbow {
+  position: fixed;
   pointer-events: none;
   overflow: hidden;
   top: 0;
   left: 0;
-  z-index: -9;
+  z-index: -1;
   width: 100%;
-  height: auto;
-  display: none;
-  background: linear-gradient(0deg, red 0%, #ff9a00 8%, #d0de21 16%, #4fdc4a 24%, #3fdad8 32%, #2fc9e2 40%, #1c7fee 48%, #5f15f2 56%, #ba0cf8 64%, #fb07d9 72%, red 88%, red 100%);
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity linear 0.4s;
+  background: #fff;
 }
 
 @keyframes rainbow {

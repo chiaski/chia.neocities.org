@@ -102,7 +102,7 @@ p {
 
 body {
   box-sizing: border-box;
-  padding: 1.5em;
+  padding: 3em;
   color: $t;
   font-family: $sans-serif;
   font-size: .85em;
@@ -112,13 +112,14 @@ body {
   background: linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 1) 8%, rgba(208, 222, 33, 1) 16%, rgba(79, 220, 74, 1) 24%, rgba(63, 218, 216, 1) 32%, rgba(47, 201, 226, 1) 40%, rgba(28, 127, 238, 1) 48%, rgba(95, 21, 242, 1) 56%, rgba(186, 12, 248, 1) 64%, rgba(251, 7, 217, 1) 72%, rgba(255, 0, 0, 1) 88%, rgba(255, 0, 0, 1) 100%, );
   
   @media screen and (max-width: 800px) {
+    padding: 1.5em;
   font-size: .8em;
   }
 }
 
 main {
+  
   max-width: 85vw;
-  width: 800px;
 
   //font-family: adobe-text-pro, serif;
   z-index: 9;
@@ -140,7 +141,7 @@ main {
 
 
 a{
-      transition: all .2s cubic-bezier(.17, .67, .64, .25);
+//      transition: all .2s cubic-bezier(.17, .67, .64, .25);
   text-decoration: none;
   color: blue;
   opacity: $soft;
@@ -157,7 +158,7 @@ a:hover{
   //  justify-content: center;
   align-items: center;
   min-height: 100vh;
-    padding-bottom: 120px;
+    padding-bottom: 20vh;
 box-sizing: border-box;
   
   #url {
@@ -184,7 +185,7 @@ box-sizing: border-box;
 
     td {
       margin: 0;
-      transition: all .4s cubic-bezier(.17, .67, .64, .25);
+      transition: opacity .4s cubic-bezier(.17, .67, .64, .25);
     }
 
     td._domain {
@@ -229,15 +230,15 @@ box-sizing: border-box;
 
     td._neocities {
       opacity: 0;
-      transition: all .9s cubic-bezier(.17, .67, .64, .25);
-      transition-delay: .5s;
+      transition: all .4s cubic-bezier(.17, .67, .64, .25);
+      transition-delay: .3s;
     }
 
     a {
       color: $link;
       text-decoration: none;
       opacity: 1;
-      text-shadow: 0 0 8px $link;
+//      text-shadow: 0 0 8px $link;
       line-height: 140%;
       transition: all .3s cubic-bezier(.17, .67, .64, .25);
     }
@@ -260,8 +261,16 @@ box-sizing: border-box;
 
   @media screen and (max-width: 800px) {
 
+    
+    align-items: flex-start;
+    
     td {
       font-size: .9em;
+      
+      a{
+        margin-bottom: .25em;
+      }
+      
     }
 
     td._www {
@@ -269,11 +278,11 @@ box-sizing: border-box;
     }
 
     td#_website {
-      padding-right:1em;
+      padding-right:1.25em;
     }
 
     #url tr._url {
-      font-size: 1.6em;
+      font-size: 1.4em;
     }
 
   }
@@ -286,12 +295,15 @@ box-sizing: border-box;
 }
 
 #p {
+  
+  max-width: 80vw;
+  
   a {
     display: inline-block;
     width: 240px;
     transition: all 1.2s cubic-bezier(.17, .67, .64, .25);
-    margin-right: .5em;
-    margin-bottom: .5em;
+    margin: 1em 0;
+    margin-right: 1.75em;
 
     strong {
       font-weight: normal;
@@ -342,12 +354,18 @@ h1 {
   line-height: 100%;
   letter-spacing: -1.5px;
   display: inline-block;
+  margin-left: -.05em;
 }
 
 p {
   opacity: 0.8;
   margin: 1em 0;
   line-height: 140%;
+}
+
+ol, ul{
+  padding: .25em .75em;
+  opacity: $softer;
 }
 
 li {
@@ -400,6 +418,31 @@ table.love {
   
 }
 
+.newsletter{
+  
+  input{
+    padding: .25em;
+    background: transparent;
+    border: 1px solid $t;
+  font-family: $sans-serif;
+    letter-spacing: -.25px;
+  }
+  
+  input[type='submit']{
+    cursor: pointer;
+  transition: all linear 0.2s;
+  }
+  
+  input[type='submit']:hover{
+    opacity: $softer;
+    background: blue;
+    border: blue 1px solid ;
+    box-shadow: 0 0 8px blue;
+    color: #fff;
+  }
+  
+}
+
 #love{
   display: flex;
   flex-wrap: wrap;
@@ -425,12 +468,12 @@ table.love {
 
 //links
 #links {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100vw;
   box-sizing: border-box;
-  padding: 2em;
+  padding: 3em;
   display: flex;
   
   strong{
@@ -489,7 +532,7 @@ table.love {
     box-sizing: border-box;
     padding: 2em;
     margin: 0;
-    font-size: .8em;
+    font-size: .9em;
 
     ._link {
       padding-right: 10px;
@@ -510,7 +553,7 @@ table.love {
 
 .bg {
   position: fixed;
-  height: 100vh;
+  height: 150vh;
   width: 100vw;
   top: 0;
   left: 0;
@@ -533,32 +576,36 @@ table.love {
 }
 
 .dark{
+  position: fixed;
   top: 0;
   left: 0;
-  position: fixed;
   width: 100%;
   height: 100%;
   background: #121212;
   z-index: 999;
   pointer-events: none;
   mix-blend-mode: color;
-  display: none;
   transition: opacity linear 0.4s;
+  opacity: 0;
 }
 
 .rainbow {
+  position: fixed;
   pointer-events: none;
   overflow: hidden;
   top: 0;
   left: 0;
-  z-index: -9;
+  z-index: -1;
 
   width: 100%;
-  height: auto;
-  display: none;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+//  display: none;
+  transition: opacity linear 0.4s;
 
 
-  background: linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 1) 8%, rgba(208, 222, 33, 1) 16%, rgba(79, 220, 74, 1) 24%, rgba(63, 218, 216, 1) 32%, rgba(47, 201, 226, 1) 40%, rgba(28, 127, 238, 1) 48%, rgba(95, 21, 242, 1) 56%, rgba(186, 12, 248, 1) 64%, rgba(251, 7, 217, 1) 72%, rgba(255, 0, 0, 1) 88%, rgba(255, 0, 0, 1) 100%, );
+  background: #fff;
 }
 
 
