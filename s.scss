@@ -1,0 +1,611 @@
+@font-face {
+  font-family: "Standard";
+  font-weight: normal;
+  src: url(./fonts/standard-book-webfont.woff);
+}
+
+@font-face {
+  font-family: "Standard";
+  font-weight: normal;
+  font-style: italic;
+  src: url(./fonts/standard-book-italic-webfont.woff);
+}
+
+@font-face {
+  font-family: "Standard";
+  font-weight: bold;
+  font-style: oblique;
+  src: url(./fonts/standard-bold-webfont.woff);
+}
+
+@font-face {
+  font-family: "Standard";
+  font-weight: bold;
+  font-style: italic;
+  src: url(./fonts/standard-bold-italic-webfont.woff);
+}
+
+$sans-serif: "Standard";
+$serif: "Times New Roman";
+
+$softer: 0.8;
+$soft: 0.6;
+
+$t: #17171a;
+//$t: #1d1d55;
+$link: #DF7EEA;
+$rainbow-link: rainbow 6s linear 0s infinite;
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-style: inherit;
+  font-variant-ligatures: inherit;
+  font-variant-caps: inherit;
+  font-variant-numeric: inherit;
+  font-variant-east-asian: inherit;
+  font-weight: inherit;
+  font-stretch: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  vertical-align: baseline;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+// progress bar
+
+.progress {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  left: 0;
+  height: 10px;
+  width: 0;
+  opacity: 0.6;
+  mix-blend-mode: darken;
+  transition: all linear 0.1s;
+  width: 100%;
+  z-index: 999;
+  pointer-events: none;
+
+  ._r {
+    mix-blend-mode: color;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 1) 8%, rgba(208, 222, 33, 1) 16%, rgba(79, 220, 74, 1) 24%, rgba(63, 218, 216, 1) 32%, rgba(47, 201, 226, 1) 40%, rgba(28, 127, 238, 1) 48%, rgba(95, 21, 242, 1) 56%, rgba(186, 12, 248, 1) 64%, rgba(251, 7, 217, 1) 72%, rgba(255, 0, 0, 1) 88%, rgba(255, 0, 0, 1) 100%, );
+  }
+
+}
+
+body {
+  box-sizing: border-box;
+  padding: 1.5em;
+  color: $t;
+  font-family: $sans-serif;
+  font-size: .85em;
+
+  transition: background 2s linear;
+
+  background: linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 1) 8%, rgba(208, 222, 33, 1) 16%, rgba(79, 220, 74, 1) 24%, rgba(63, 218, 216, 1) 32%, rgba(47, 201, 226, 1) 40%, rgba(28, 127, 238, 1) 48%, rgba(95, 21, 242, 1) 56%, rgba(186, 12, 248, 1) 64%, rgba(251, 7, 217, 1) 72%, rgba(255, 0, 0, 1) 88%, rgba(255, 0, 0, 1) 100%, );
+  
+  @media screen and (max-width: 800px) {
+  font-size: .8em;
+  }
+}
+
+main {
+  max-width: 85vw;
+  width: 800px;
+
+  //font-family: adobe-text-pro, serif;
+  z-index: 9;
+  //    -webkit-background-clip: text;
+  //    -moz-background-clip: text;
+  //    -webkit-text-fill-color: transparent; 
+  //    -moz-text-fill-color: transparent;
+
+
+  p {
+    width: 600px;
+    max-width: 90vw;
+  }
+
+  strong {
+    font-weight: normal;
+  }
+}
+
+
+a{
+      transition: all .2s cubic-bezier(.17, .67, .64, .25);
+  text-decoration: none;
+  color: blue;
+  opacity: $soft;
+}
+
+a:hover{
+  animation: $rainbow-link;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+#hi {
+
+  display: flex;
+  //  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+    padding-bottom: 120px;
+box-sizing: border-box;
+  
+  #url {
+    overflow: hidden;
+    
+    #_go{
+      display: none;
+      opacity: $softer;
+    }
+
+    //    border: 1px solid #000;
+    //    margin: 0 auto;
+    padding: 1em 0;
+    vertical-align: text-top;
+
+    
+    strong{
+      font-weight: normal;
+    }
+
+    table {
+      margin: 0 auto;
+    }
+
+    td {
+      margin: 0;
+      transition: all .4s cubic-bezier(.17, .67, .64, .25);
+    }
+
+    td._domain {
+      min-width: 190px;
+      
+      a {
+        opacity: $softer;
+        text-decoration: none;
+      }
+      
+  @media screen and (max-width: 800px) {
+    min-width: 155px;
+      }
+
+    }
+
+
+      a._unavailable {
+        opacity: 0.4;
+      }
+    td#_website {
+      //      background: $link;
+    }
+
+    tr._url {
+      margin: 0;
+      font-size: 2.9em;
+      max-width: none;
+    }
+
+    tr._desc td {
+      text-align: left;
+      //      font-size: .9em;
+      max-width: 100px;
+      padding-right: 1.5em;
+      vertical-align: text-top;
+    }
+
+    tr._desc td a {
+      display: block;
+    }
+
+    td._neocities {
+      opacity: 0;
+      transition: all .9s cubic-bezier(.17, .67, .64, .25);
+      transition-delay: .5s;
+    }
+
+    a {
+      color: $link;
+      text-decoration: none;
+      opacity: 1;
+      text-shadow: 0 0 8px $link;
+      line-height: 140%;
+      transition: all .3s cubic-bezier(.17, .67, .64, .25);
+    }
+
+    a:hover {
+      cursor: pointer;
+      text-shadow: 0 0 6px blue;
+      color: blue;
+      padding-left: .5em;
+      animation: none;
+    }
+
+    a._unavailable:hover {
+      padding-left: 0;
+      text-shadow: none;
+      color: gray;
+    }
+
+  }
+
+  @media screen and (max-width: 800px) {
+
+    td {
+      font-size: .9em;
+    }
+
+    td._www {
+      display: none;
+    }
+
+    td#_website {
+      padding-right:1em;
+    }
+
+    #url tr._url {
+      font-size: 1.6em;
+    }
+
+  }
+}
+
+
+.spacer {
+  display: block;
+  height: 25vh;
+}
+
+#p {
+  a {
+    display: inline-block;
+    width: 240px;
+    transition: all 1.2s cubic-bezier(.17, .67, .64, .25);
+    margin-right: .5em;
+    margin-bottom: .5em;
+
+    strong {
+      font-weight: normal;
+      font-family: $serif;
+      opacity: 0.6;
+    }
+    
+    .url{
+display: block;
+    padding-bottom: .25em;
+      text-decoration: underline;
+    }
+    
+    .url::before{
+      content: "https://";
+    }
+
+    h2 {
+      font-size: 2em;
+      letter-spacing: -1px;
+      opacity: 0.8;
+      line-height: 110%;
+    }
+
+    h2,
+    strong {}
+
+    p {
+      line-height: 140%;
+      margin: .5em 0;
+      opacity: $softer;
+    }
+  }
+
+  a:hover {
+    cursor: pointer;
+
+    h2,
+    strong {
+      animation: $rainbow-link;
+
+    }
+  }
+}
+
+h1 {
+  font-size: 4em;
+  line-height: 100%;
+  letter-spacing: -1.5px;
+  display: inline-block;
+}
+
+p {
+  opacity: 0.8;
+  margin: 1em 0;
+  line-height: 140%;
+}
+
+li {
+  margin: 1em 0;
+}
+
+
+.title-links {
+  display: inline-block;
+
+  a {
+    display: block;
+    opacity: $soft;
+  }
+
+  a:hover {
+    opacity: $softer;
+    cursor: pointer;
+    color: $link;
+    animation: $rainbow-link;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+
+// love
+table.love {
+  max-width: 80vw;
+  line-height: 140%;
+  font-size: .9em;
+
+  td {
+    padding: .25em 0;
+    vertical-align: text-top;
+  }
+
+  td._desc {
+    opacity: $softer;
+  }
+  
+  p{
+    width: 320px;
+    max-width: 50%;
+  }
+  
+}
+
+#love{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+  
+  span{
+    display: inline-block;
+    padding: .25em 0;
+    padding-right: 1.5em;
+    opacity: $softer;
+      transition: all .3s ease;
+  }
+  
+  span:hover{
+    color: $link;
+    text-shadow: 0 0 8px $link;
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+}
+
+
+//links
+#links {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 2em;
+  display: flex;
+  
+  strong{
+    font-weight: normal;
+  }
+
+  ._link._information {
+    margin-left: auto;
+    margin-right: 0;
+    width: 30vw;
+    max-width: 300px;
+
+    #say_what {
+      transition: all .3s ease;
+      opacity: $softer;
+    }
+  }
+  
+
+  
+  ._link {
+    padding-right: 40px;
+
+    p {
+      margin: 0;
+      opacity: $soft;
+    }
+
+
+  }
+
+  
+
+    strong {
+      display: block;
+      margin-bottom: .5em;
+    }
+  
+    a {
+      text-decoration: none;
+      display: block;
+      color: $t;
+      opacity: $soft;
+      line-height: 140%;
+    }
+
+    a:hover {
+      opacity: 1;
+      cursor: pointer;
+      color: blue;
+    }
+  
+  @media screen and (max-width: 800px) {
+
+    position: absolute;
+    box-sizing: border-box;
+    padding: 2em;
+    margin: 0;
+    font-size: .8em;
+
+    ._link {
+      padding-right: 10px;
+    }
+    
+  ._link._information {
+    width: 40vw;
+    }
+
+  }
+}
+
+
+.serif {
+  font-family: $serif;
+  font-size: 1.1em;
+}
+
+.bg {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -8;
+  opacity: 1;
+  pointer-events: none;
+
+  background: rgb(230, 233, 233);
+  background: linear-gradient(180deg, rgba(230, 233, 233, 1) 0%, rgba(230, 233, 233, 1) 30%, rgba(230, 233, 233, 0.5) 100%);
+  //background: rgb(221,198,209);
+  //  background: linear-gradient(-180deg, rgba(221,198,209,1) 0%, rgba(221,198,209,0.5) 90%, rgba(221,198,209,0) 100%);
+}
+
+#NOTFOUND{
+  position: absolute;
+  right: 0;
+  top: 2vh;
+  cursor: all-scroll;
+}
+
+.dark{
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  z-index: 999;
+  pointer-events: none;
+  mix-blend-mode: color;
+  display: none;
+  transition: opacity linear 0.4s;
+}
+
+.rainbow {
+  pointer-events: none;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -9;
+
+  width: 100%;
+  height: auto;
+  display: none;
+
+
+  background: linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 1) 8%, rgba(208, 222, 33, 1) 16%, rgba(79, 220, 74, 1) 24%, rgba(63, 218, 216, 1) 32%, rgba(47, 201, 226, 1) 40%, rgba(28, 127, 238, 1) 48%, rgba(95, 21, 242, 1) 56%, rgba(186, 12, 248, 1) 64%, rgba(251, 7, 217, 1) 72%, rgba(255, 0, 0, 1) 88%, rgba(255, 0, 0, 1) 100%, );
+}
+
+
+
+
+@keyframes rainbow {
+  from {
+    color: rgba(255, 0, 0, .8);
+  }
+
+  8% {
+    color: rgba(255, 154, 0, .8);
+  }
+
+  16% {
+    color: rgba(208, 222, 33, .8);
+  }
+
+  24% {
+    color: rgba(79, 220, 74, .8);
+  }
+
+  32% {
+    color: rgba(63, 218, 216, .8);
+  }
+
+  40% {
+    color: rgba(47, 201, 226, .8);
+  }
+
+  48% {
+    color: rgba(28, 127, 238, .8);
+  }
+
+  56% {
+    color: rgba(95, 21, 242, .8);
+  }
+
+  64% {
+    color: rgba(186, 12, 248, .8);
+  }
+
+  72% {
+    color: rgba(251, 7, 217, .8);
+  }
+
+  100% {
+    color: rgba(255, 0, 0, .8);
+  }
+}
