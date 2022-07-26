@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> /about.html </title>
+  <meta name="description" content="description" />
+  <meta name="author" content="Chia" />
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="./s.css" type="text/css">
+  <link rel="stylesheet" href="./rainbow.css" type="text/css">
+  
+
+</head>
+<body>
+  <div class="progress">
+    <div class="_r"></div>
+
+  </div>
+
+  <div class="welcome"></div>
+  <div class="bg"></div>
+
+  <section class="nav">
+    <div>www.</div>
+    <div class="_domain"><a href="index.html">chia.neocities.org</a></div>
+    <div class="_page">
+      <select onchange="if (this.value) window.location.href=this.value">
+        <option value="record.html">/record.html</option>
+        <option value="about.html">/about.html</option>
+        <option value="friends.html">/friends.html</option>
+        <option value="index.html">/index.html</option>
+      </select>
+    </div>
+  </section>
+  
+  <section id="hi">
+    
+  
+  </section>
+  
+  <main>
+    
+    <div class="spacer" style="height: 15vh"></div>
+  </main>
+  
+  
+  <section class="nav">
+    <div>www.</div>
+    <div class="_domain"><a href="index.html">chia.neocities.org</a></div>
+    <div class="_page">
+      <select onchange="if (this.value) window.location.href=this.value">
+        <option value="about.html">/about.html</option>
+        <option value="friends.html">/friends.html</option>
+        <option value="index.html">/index.html</option>
+      </select>
+    </div>
+  </section>
+  
+  <script src="jquery.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+  
+  
+  <script type="text/javascript">
+    
+    function autorun() {
+      
+      $("img").draggable();
+
+      $(document).on("scroll", function() {
+        var pixels = $(document).scrollTop();
+        var pageHeight = $(document).height() - $(window).height();
+        var progress = 100 * pixels / pageHeight;
+
+        $("div.progress").css("width", progress + "%");
+      })
+    }
+
+    if (document.addEventListener)
+      document.addEventListener('DOMContentLoaded', autorun, false)
+    else window.onload = autorun
+
+  </script>
+  
+
+</body>
+
+</html>
