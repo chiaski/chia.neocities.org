@@ -625,6 +625,9 @@ table.love {
   left: 0;
   pointer-events: none;
   z-index: 99;
+  
+  display: none;
+  
   animation: bye .5s;
   animation-fill-mode: forwards;
   animation-delay: .5s;

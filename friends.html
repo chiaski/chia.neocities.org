@@ -50,8 +50,7 @@
     }
     
     #index a{
-      font-size: 1.25em;
-      margin-bottom: 1em;
+      font-size: .9em;
       width: 100%;
       max-width: auto;
       vertical-align: text-top;
@@ -59,23 +58,79 @@
       flex-wrap: nowrap;
       flex-direction: row;
       justify-content: space-between;
+      opacity: 0.8;
+/*      border-bottom: 1px solid;*/
+      padding: .5em 0;
+    }
+    
+    #index a:nth-child(1n){
+      border-bottom: 1px solid red;
+    }
+    
+    
+    #index a:nth-child(2n){
+      border-bottom: 1px solid orange;
+    }
+    
+    #index a:nth-child(3n){
+      border-bottom: 1px solid yellow;
+    }
+    #index a:nth-child(4n){
+      border-bottom: 1px solid green;
+    }
+    
+    
+    #index a:nth-child(5n){
+      border-bottom: 1px solid blue;
+    }
+    
+    #index a:nth-child(6n){
+      border-bottom: 1px solid pink;
+    }
+    
+    #index a:hover > div{
+      color: blue;
+      opacity: 1;
     }
     
     #index a div{
       vertical-align: text-top;
       display: inline-block;
-      padding: .25em;
+      padding: .25em 0;
       margin-right: 1em;
       color: #121212;
     }
     
     #index a .__name{
       font-family:"Times New Roman";
-      font-size: 2em;
+      font-size: 1.85em;
+      vertical-align: text-top;
+      line-height: 100%;
+      width: 20%;
+      margin-top: -.15em;
+    }
+    
+    #index a .__url{
+      width: 30%;
+      text-align: right;
+      color: blue;
     }
     
     #index a .__desc{
-      
+      text-align: left;
+      width: 50%;
+    }
+    
+    
+      @media screen and (max-width: 800px) {
+        #index a .__desc{
+          display: none;
+        }   
+        
+        #index a .__url{
+          width: 60%;
+          margin-top: .5em;
+        }
     }
     
   </style>
@@ -108,161 +163,173 @@
   </section>
 
   <main>
-    <p>Their websites... there are also so many without websites. Soon I will write about how much I love all of them. </p>
-
-    
-    <p>I like having friends... please feel free to <a href="mailto:hotemogirlfriend@gmail.com">email/text</a> me if u would like to join! and we can text and hang and our websites can kiss </p>
+    <p>Their websites... there are also so many without websites. Soon I will write about how much I love all of them. please feel free to <a href="mailto:hotemogirlfriend@gmail.com">email/text</a> me if u would like to join! and we can text and hang and our websites can kiss </p>
     
      <div id="index">
       
        <a href="https://bianca.digital">
-      <div class="__name">Bianca</div>
-      <div class="__form">bianca.digital</div>
-      <div class="__desc">i love biana so much and no one matches her curiosity and kindness. one day i want to own a nice little publishing press with etches her curiosity and kindness. one day i want to own a nice little publishing press with ehr</div>
+      <div class="__name">bianca</div>
+      <div class="__desc">mwaah</div>
+      <div class="__url">bianca.digital</div>
+         </a>
+       
+       <a href="https://twitter.com/Mwahahannah">
+      <div class="__name">alannah</div>
+      <div class="__desc">
+         alannah and i are going to destroy the philippine graphic design industry in a good way
+         </div>
+      <div class="__url">twitter.com/Mwahahannah</div>
+         </a>
+       <a href="https://hellocarmen.cargo.site">
+      <div class="__name">carmen</div>
+      <div class="__desc">
+         carmen is the goth gf to my emo gf
+         </div>
+      <div class="__url">hellocarmen.cargo.site</div>
+         </a>
+       <a href="https://twitter.com/tinyeggie">
+      <div class="__name">gabbey</div>
+      <div class="__desc">
+         gabby once drew me kuzupeko comic.. actually several times,
+         </div>
+      <div class="__url">twitter.com/tinyeggie</div>
+         </a>
+       <a href="https://twitter.com/scaIeshade">
+      <div class="__name">ashe</div>
+      <div class="__desc">
+       one time they went over to my house when we were in middle school and we didnt speak a isngle word for hours, opting to type on skype instead, until my mom ordered us shakey's
+         </div>
+      <div class="__url">twitter.com/scaIeshade</div>
+         </a>
+       <a href="https://kaloyankolev.com">
+      <div class="__name">kalo</div>
+      <div class="__desc">
+         kalo copied my resume but at least he asked
+         </div>
+      <div class="__url">kaloyankolev.com</div>
+         </a>
+       <a href="https://321nothanks.neocities.org">
+      <div class="__name">chloe</div>
+      <div class="__desc">
+         i love chloe..
+         </div>
+      <div class="__url">321nothanks.neocities.org</div>
+         </a>
+       <a href="https://terrible.day">
+      <div class="__name">kevin</div>
+      <div class="__desc">
+       i love kevin. he helped me move my couch and my crt and printed me fake wristbands for spring fling. in return i tell him that i think i am an evil person
+         </div>
+      <div class="__url">terrible.day</div>
+         </a>
+       
+       <a href="https://bricebai.com">
+      <div class="__name">brice</div>
+      <div class="__desc">
+        brice and i bonded over pacthesis dating sims
+         </div>
+      <div class="__url">bricebai.com</div>
+         </a>
+       
+       <a href="https://katelivewirebio.glitch.me">
+      <div class="__name">kate</div>
+      <div class="__desc">
+          one of my favorite people ive met through developh...
+         </div>
+      <div class="__url">katelivewirebio.glitch.me</div>
+         </a>
+    
+       <a href="https://jingyingwang.github.io">
+      <div class="__name">jean</div>
+      <div class="__desc">
+            i brought vodka to jean's birthday at the soccer house and there were pokemon plates 
+         </div>
+      <div class="__url">jingyingwang.github.io</div>
+         </a>
+    
+       <a href="https://jake-advincula.super.site">
+      <div class="__name">jake</div>
+      <div class="__desc">
+         i love his messy instagram stories. the filipino stuff is ok too i guess
+         </div>
+      <div class="__url">jake-advincula.super.site</div>
+         </a>
+    
+       <a href="https://jake.chvatal.com">
+      <div class="__name">jake</div>
+      <div class="__desc">
+          this is another jake that ive only met through the internet
+         </div>
+      <div class="__url">jake.chvatal.com</div>
+         </a>
+    
+       <a href="https://sarahteng.squarespace.com">
+      <div class="__name">sarah</div>
+      <div class="__desc">
+          i watched sarah fall down on the street after a car seat headrest concert. i did fail to catch her
+         </div>
+      <div class="__url">sarahteng.squarespace.com</div>
+         </a>
+    
+       <a href="https://tobyshorin.com">
+      <div class="__name">toby</div>
+      <div class="__desc">
+          toby is kind of like my internet dad but i need to reply to him more
+         </div>
+      <div class="__url">tobyshorin.com</div>
+         </a>
+    
+       <a href="https://instagram.com/trstne">
+      <div class="__name">tristen</div>
+      <div class="__desc">
+           he doesn't have a website anymore  so im using his eboy instagram
+         </div>
+      <div class="__url">instagram.com/trstne</div>
+         </a>
+    
+       <a href="https://linktr.ee/noremi">
+      <div class="__name">sharon</div>
+      <div class="__desc">
+        i love u sharon
+         </div>
+      <div class="__url">linktr.ee/noremi</div>
+         </a>
+    
+       <a href="https://harryisaac.com">
+      <div class="__name">harry</div>
+      <div class="__desc">
+          harry sold me his ana roxanne tickets because he got covid
+         </div>
+      <div class="__url">harryisaac.com</div>
+         </a>
+    
+       <a href="https://laurenhyelee.com">
+      <div class="__name">lauren</div>
+      <div class="__desc">
+         lauren lieks animal collective and i like animal collective
+         </div>
+      <div class="__url">laurenhyelee.com</div>
+         </a>
+    
+       <a href="https://eugenekudashev.com">
+      <div class="__name">eugene</div>
+      <div class="__desc">
+          eugene makes good jokes and websites 
+         </div>
+      <div class="__url">eugenekudashev.com</div>
          </a>
     
     </div>
     
+
+    <br>
+    <br>
+    <br>
     
-    <div class="_friends" id="p">
-      
-    <a data-tag="friends" href="https://bianca.digital" target="_blank">
-      <h2><span class="serif">bianca</span></h2>
-      <span class="url">bianca.digital</span> i love bianca so much and one day i want to own a nice little publishing press with her
-    </a>
-      
-    <a data-tag="friends" href="https://twitter.com/Mwahahannah" target="_blank">
-      <h2><span class="serif">alannah</span></h2>
-      <span class="url">twitter.com/Mwahahannah</span>
-      alannah and i are going to destroy the philippine graphic design industry in a good way
-    </a>
-      
-    <a data-tag="friends" href="https://moiras.cargo.site/" target="_blank">
-      <h2><span class="serif">moo</span></h2>
-      <span class="url">moiras.cargo.site</span>
-      moira drew my fursona for me 
-    </a>
-      
-    <a data-tag="friends" href="https://hellocarmen.cargo.site/" target="_blank">
-      <h2><span class="serif">carmen</span></h2>
-      <span class="url">hellocarmen.cargo.site</span>
-      carmen is the goth gf to my emo gf
-    </a>
-      
-    <a data-tag="friends" href="https://twitter.com/tinyeggie" target="_blank">
-      <h2><span class="serif">gabbey</span></h2>
-      <span class="url">twitter.com/tinyeggie</span> gabby once drew me kuzupeko comic.. actually several times,
-    </a>
-      
-    <a data-tag="friends" href="https://twitter.com/scaIeshade" target="_blank">
-      <h2><span class="serif">ashe</span></h2>
-      <span class="url">twitter.com/scaIeshades</span> one time they went over to my house when we were in middle school and we didnt speak a isngle word for hours, opting to type on skype instead, until my mom ordered us shakey's
-    </a>
-      
-    <a data-tag="friends" href="https://kaloyankolev.com" target="_blank">
-      <h2><span class="serif">kalo</span></h2>
-      <span class="url">kaloyankolev.com</span>
-      kalo copied my resume but at least he asked. he might be my 2nd favorite he/him right now
-    </a>
-      
-    <a data-tag="friends" href="htthttps://321nothanks.neocities.org/" target="_blank">
-      <h2><span class="serif">chloe</span></h2>
-      <span class="url">321nothanks.neocities.org</span>
-      i love chloe
-    </a>
-      
-    <a data-tag="friends" href="https://kevinnchen.com/" target="_blank">
-      <h2><span class="serif">kevin</span></h2>
-      <span class="url">kevinnchen.com</span>
-      i love kevin. he helped me move my couch and my crt and printed me fake wristbands for spring fling. in return i tell him that i think i am an evil person
-    </a>
-      
-    <a data-tag="friends" href="https://bricebai.com/" target="_blank">
-      <h2><span class="serif">brice</span></h2>
-      <span class="url">bricebai.com</span>
-      brice and i bonded over pacthesis dating sims
-    </a>
-      
-    <a data-tag="friends" href="https://katelivewirebio.glitch.me/" target="_blank">
-      <h2><span class="serif">kate</span></h2>
-      <span class="url">katelivewirebio.glitch.me</span>
-      one of my favorite people ive met through developh...
-    </a>
-      
-    <a data-tag="friends" href="https://jingyingwang.github.io/" target="_blank">
-      <h2><span class="serif">jean</span></h2>
-      <span class="url">jingyingwang.github.io</span>
-      i brought vodka to jean's birthday at the soccer house and there were pokemon plates 
-    </a>
-      
-    <a data-tag="friends" href="https://jake-advincula.super.site/" target="_blank">
-      <h2><span class="serif">jake</span></h2>
-      <span class="url">jake-advincula.super.site</span>
-      insanely curious and talented 
-    </a>
-      
-    <a data-tag="friends" href="https://jake.chvatal.com/" target="_blank">
-      <h2><span class="serif">jake</span></h2>
-      <span class="url">jake-chvatal.com</span>
-jake is very cool but i have not met him in real life yet
-    </a>
-      
-    <a data-tag="friends" href="https://sarahteng.squarespace.com/" target="_blank">
-      <h2><span class="serif">sarah</span></h2>
-      <span class="url">sarahteng.squarespace.com</span> i watched sarah fall down on the street after a car seat headrest concert 
-    </a>
-      
-    <a data-tag="friends" href="https://rence.la" target="_blank">
-      <h2><span class="serif">lawrence</span></h2>
-      <span class="url">rence.la</span>
-      i love lawrence
-    </a>
-      
-    <a data-tag="friends" href="https://tobyshorin.com" target="_blank">
-      <h2><span class="serif">toby</span></h2>
-      <span class="url">tobyshorin.com</span>
-      toby is kind of like my internet dad but i need to reply to him more
-    </a>
-      
-    <a data-tag="friends" href="https://www.instagram.com/trstne" target="_blank">
-      <h2><span class="serif">tristen</span></h2>
-      <span class="url">instagram.com/trstne</span>
-      he doesn't have a website so im using his eboy instagram
-    </a>
-      
-    <a data-tag="friends" href="https://linktr.ee/noremi" target="_blank">
-      <h2><span class="serif">sharon</span></h2>
-      <span class="url">linktr.ee/noremi</span>a very talented musician.. i love..
-    </a>
-    <a href="http://knavehaven.net/" target="_blank">
-      <h2><span class="serif">staoue</span></h2>
-      <span class="url">knavehaven.net</span>swagapino
-    </a>
-    <a data-tag="friends" href="https://www.laurenhyelee.com/" target="_blank">
-      <h2><span class="serif">lauren</span></h2>
-      <span class="url">laurenhyelee.com</span>
-      lauren lieks animal collective and i like animal collective
-    </a>
-    <a data-tag="friends" href="https://www.harryisaac.com/" target="_blank">
-      <h2><span class="serif">harry</span></h2>
-      <span class="url">harryisaac.com</span>
-      harry sold me his ana roxanne tickets 
-    </a>
-    <a data-tag="friends" href="https://www.eugenekudashev.com" target="_blank">
-      <h2><span class="serif">eugene</span></h2>
-      <span class="url">eugenekudashev.com</span>
-      eugene makes good jokes and websites 
-    </a>
-      
-    <div class="spacer" style="height: 5vh"></div>
-      
-    <img src="friends.png" style="width: 250px;">
-    
-    </div>
-    
+    <center>
     <div class="_filters">
     <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSe87qOt30w2A6Mb1QDgfb-Isksyxma4ALo0Ihyb-tBLRXTHCA/viewform?usp=sf_link', '_blank')">Be a website friend</button>
-    </div>
+    </div></center>
     
     <div class="spacer" style="height: 10vh"></div>
   </main>
