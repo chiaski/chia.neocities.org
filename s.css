@@ -107,6 +107,10 @@ main strong {
   font-weight: normal;
 }
 
+#nav a {
+  font-size: 6em;
+}
+
 a {
   text-decoration: none;
   color: blue;
@@ -114,15 +118,12 @@ a {
 }
 
 a:hover {
-  animation: rainbow 6s linear 0s infinite;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
 
 #hi {
   display: flex;
-  align-items: center;
   min-height: 100vh;
-  padding-bottom: 20vh;
   box-sizing: border-box;
 }
 #hi #url {
@@ -148,7 +149,6 @@ a:hover {
   min-width: 190px;
 }
 #hi #url td._domain a {
-  opacity: 0.8;
   text-decoration: none;
 }
 @media screen and (max-width: 800px) {
@@ -161,8 +161,11 @@ a:hover {
 }
 #hi #url tr._url {
   margin: 0;
-  font-size: 2.9em;
+  font-size: 3em;
+  letter-spacing: -1px;
+  line-height: 150%;
   max-width: none;
+  font-weight: normal;
 }
 #hi #url tr._desc td {
   text-align: left;
@@ -174,6 +177,7 @@ a:hover {
   display: block;
 }
 #hi #url td._neocities {
+  display: block;
   opacity: 0;
   transition: all 0.4s cubic-bezier(0.17, 0.67, 0.64, 0.25);
   transition-delay: 0.3s;
@@ -187,9 +191,7 @@ a:hover {
 }
 #hi #url a:hover {
   cursor: pointer;
-  text-shadow: 0 0 6px blue;
   color: blue;
-  padding-left: 0.5em;
   animation: none;
 }
 #hi #url a._unavailable:hover {
@@ -203,6 +205,7 @@ a:hover {
   }
   #hi td {
     font-size: 0.9em;
+    letter-spacing: 0;
   }
   #hi td a {
     margin-bottom: 0.25em;
@@ -229,19 +232,25 @@ a:hover {
 #p a {
   display: inline-block;
   width: 240px;
-  transition: all 1.2s cubic-bezier(0.17, 0.67, 0.64, 0.25);
   margin: 1em 0;
   margin-right: 1.75em;
+  padding-right: 0.5em;
+  color: #17171a;
+  opacity: 1;
 }
 #p a strong {
   font-weight: normal;
   font-family: "Times New Roman";
-  opacity: 0.6;
+  opacity: 0.8;
 }
 #p a .url {
   display: block;
   padding-bottom: 0.25em;
   text-decoration: underline;
+  transition: color linear 0.2s;
+}
+#p a .url {
+  color: blue;
 }
 #p a .url::before {
   content: "https://";
@@ -249,7 +258,7 @@ a:hover {
 #p a h2 {
   font-size: 2em;
   letter-spacing: -1px;
-  opacity: 0.8;
+  opacity: 1;
   line-height: 110%;
 }
 #p a p {
@@ -259,16 +268,16 @@ a:hover {
 }
 #p a:hover {
   cursor: pointer;
+  opacity: 1;
 }
-#p a:hover h2,
-#p a:hover strong {
-  animation: rainbow 6s linear 0s infinite;
+#p a:hover .url {
+  color: #DF7EEA;
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 3.2em;
   line-height: 100%;
-  letter-spacing: -1.5px;
+  letter-spacing: -1px;
   display: inline-block;
   margin-left: -0.05em;
 }
@@ -279,7 +288,8 @@ p {
   line-height: 140%;
 }
 
-ol, ul {
+ol,
+ul {
   padding: 0.25em 0.75em;
   opacity: 0.8;
 }
@@ -306,6 +316,10 @@ li {
   h1 {
     font-size: 3em;
   }
+
+  .__dusk {
+    display: none !important;
+  }
 }
 table.love {
   max-width: 80vw;
@@ -330,17 +344,16 @@ table.love p {
   border: 1px solid #17171a;
   font-family: "Standard";
   letter-spacing: -0.25px;
+  color: #17171a;
 }
 .newsletter input[type=submit] {
+  background: none;
+  border: 0;
   cursor: pointer;
   transition: all linear 0.2s;
 }
 .newsletter input[type=submit]:hover {
-  opacity: 0.8;
-  background: blue;
-  border: blue 1px solid;
-  box-shadow: 0 0 8px blue;
-  color: #fff;
+  animation: rainbow 6s linear 0s infinite;
 }
 
 #love {
@@ -357,9 +370,27 @@ table.love p {
 }
 #love span:hover {
   color: #DF7EEA;
-  text-shadow: 0 0 8px #DF7EEA;
   opacity: 1;
+  cursor: all-scroll;
+}
+
+.nav {
+  width: 100%;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+.nav a {
+  font-size: 1em;
+  color: #17171a;
+  opacity: 1;
+}
+.nav select {
+  border: 0;
+  font-size: 1em;
   cursor: pointer;
+  background: none;
 }
 
 #links {
@@ -425,13 +456,15 @@ table.love p {
 
 .serif {
   font-family: "Times New Roman";
-  font-size: 1.1em;
+  font-size: 1.15em;
 }
 
 .bg {
   position: fixed;
   height: 150vh;
   width: 100vw;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0);
   top: 0;
   left: 0;
   overflow: hidden;
@@ -441,7 +474,40 @@ table.love p {
   background: #e6e9e9;
   background: linear-gradient(180deg, #e6e9e9 0%, #e6e9e9 30%, rgba(230, 233, 233, 0.5) 100%);
 }
+@media screen and (max-width: 800px) {
+  .bg {
+    top: auto;
+    bottom: -50vh;
+    height: 180vh;
+  }
+}
 
+.welcome {
+  position: fixed;
+  height: 200vh;
+  width: 100vw;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0);
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99;
+  animation: bye 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  background: linear-gradient(-180deg, #d04545 0%, #e2a446 8%, #c2cb5a 16%, #9bc39a 24%, #89bebd 32%, #7bb8c3 40%, #7ea0c7 48%, #a187d4 56%, #bf88d3 64%, #fb07d9 72%, #d99494 88%, #d69f9f 100%);
+}
+
+@keyframes bye {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
 #NOTFOUND {
   position: absolute;
   right: 0;
@@ -459,6 +525,7 @@ table.love p {
   z-index: 999;
   pointer-events: none;
   mix-blend-mode: color;
+  background-blend-mode: color;
   transition: opacity linear 0.4s;
   opacity: 0;
 }

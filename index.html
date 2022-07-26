@@ -14,6 +14,9 @@
 </head>
 
 <body>
+  
+  <div class="welcome"></div>
+  
   <div class="progress">
     <div class="_r"></div>
   </div>
@@ -30,7 +33,6 @@
 
       <table>
         <tr>
-
           <td class="_www"></td>
           <td class="_neocities _domain"><a href="https://chia.neocities.org" target="_blank" data-desc="Hello. You are here, presumably...">chia.neocities.org</a>
           </td>
@@ -49,7 +51,7 @@
           <td class="_www"></td>
           <td class="_domain">
             <a href="https://ifyouknewmewouldyoulove.me" target="_blank" data-desc="Net art and full index of my practice.">ifyouknewmewouldyoulove.me</a>
-            <a href="https://docs.google.com/spreadsheets/d/1LHwJt8JKIEllYm9tnJpXrnn6gf6owJtotgFXkLwNFKE/edit?usp=sharing" target="_blank" data-desc="My selected works, trying to remember everything I've done">docs.google.com</a>
+            <a data-tag="friends" href="https://docs.google.com/spreadsheets/d/1LHwJt8JKIEllYm9tnJpXrnn6gf6owJtotgFXkLwNFKE/edit?usp=sharing" target="_blank" data-desc="My selected works, trying to remember everything I've done">docs.google.com</a>
             <a href="https://chias.blog" target="_blank" data-desc="Journaling, writing about life, announcing little mundane things... at least once a month for years and years...">chias.blog</a>
             <a href="https://chia.design" target="_blank" data-desc="Design practice, work history, and more.">chia.design</a>
             <a href="https://developh.org" target="_blank" data-desc="Critical technology institute & community based in the Philippines">developh.org</a>
@@ -78,10 +80,11 @@
           </td>
           <td class="_pages">
             <a href="friends.html" data-desc="...f-ff-firends...">/friends.html</a>
+            <a href="about.html" data-desc="..,mememme..">/about.html</a>
             <a href="resume.pdf" data-desc=".ummmmmm.">/resume.pdf</a>
             <a href="#everythingiveloved" data-desc="Including you.">/#everythingiveloved</a>
             <a href="#do" data-desc="What I am doing now.">/#do</a>
-            <a class="_unavailable" data-desc="Learn a bit more about the wonderful realm of Chia websites."><s>/about.html</s></a>
+            <a href="#thinking" data-desc="What I am thinking about now.">/#thinking</a>
           </td>
         </tr>
       </table>
@@ -99,7 +102,7 @@
       <div class="_link">
         <strong>Times</strong>
         <a onclick="time('abyss')">Abyss</a>
-        <a onclick="time('dusk')">Dusk</a>
+        <a class="__dusk" onclick="time('dusk')">Dusk</a>
         <a onclick="time('sunset')">Sunset</a>
         <a onclick="time('rain')">After Rain</a>
       </div>
@@ -110,13 +113,22 @@
 
     </div>
   </section>
+  
+  <section id="nav">
+  <select>
+    <option>♡</option>
+    <option>♡ </option>
+    <option>♡</option>
+    </select>
+  </section>
 
   <main>
     <p>There are many things I love and many things I might be. </p>
 
     <p>I love to put my life on the internet because there is no where else where I can truly live. I love to be here because it's where all the people I love are, where I could potentially gather them all in one place. I love resistance, memories, sounds, and things. I love the web because it is the place where I can preserve myself and for others to explore me too, but I have the agency to control what you see and what you don't see. I love the web because I can disappear from it (somewhat) at any moment. I love the web for its poetics, sublimity, and <a href="http://luckysoap.com/statements/handmadeweb.html" target="_blank">intransigence</a>. I love letters on websites and think more websites should start with declarations, love letters, poems, and maps. I love every form of media and archive, I love the internet for its indexes and dead ends and its space and it being the space that has allowed me to be here and become.</p>
 
-    <p>Currently in New Haven, Connecticut.</p>
+    <p>Currently in New Haven, Connecticut.<br>
+    Born and raised in Manila, Philippines.</p>
 
 
 <!--
@@ -160,7 +172,7 @@
     
     <div class="spacer" style="height:10vh;" ></div>
     
-    <h1>News from me</h1>
+    <h1><span class="serif">Updates</span> from me</h1>
     <p>If you would like to get occasional updates from me, I have a Tinyletter.</p>
           <div class="newsletter">
             <form action="https://tinyletter.com/weeaboo" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/weeaboo', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
@@ -171,7 +183,7 @@
     
     <div class="spacer" style="height:10vh;" id="everythingiveloved" name="everythingiveloved"></div>
     
-    <h1>Everything I've loved</h1>
+    <h1>Everything I've <span class="serif">loved</span></h1>
     <p>A more comprehensive list is available at <a href="https://ifyouknewmewouldyoulove.me" target="_blank">ifyouknewmewouldyoulove.me</a>.</p>
     
     <div id="love">
@@ -241,7 +253,7 @@
     <div class="spacer" style="height:10vh;" id="do" name="do"></div>
     
 
-    <h1>Things I want to do</h1>
+    <h1>Things I <span class="serif">want to do</span></h1>
     <p>If you want to do any of these things together (or more), let me know.</p>
     <ol>
       <li><a href="https://close.events" target="_blank">Explore digital intimacy through a webzine; a digital exhibition of art, software, websites, literature, etc. about presence, closeness, and loving over the web.</a></li>
@@ -252,9 +264,9 @@
       <li>Make a web framework (and potentially engine?) for Pacthesis-like dating simulators.</li>
       <li>Know myself.</li>
     </ol>
-    <div class="spacer" style="height:10vh;" ></div>
+    <div class="spacer" style="height:10vh;" id="thinking" name="thinking" ></div>
     
-    <h1>What I'm thinking about</h1>
+    <h1>What I'm <span class="serif">thinking</span> about</h1>
     <p>A collection of links and oddities...</p>
     <ol>
       <li><a href="https://wordobject.wordpress.com/2015/06/26/text-su-huis-matrix-poem-star-gauge/" target="_blank">Star Gauge</a>, the poem by 4th century poet Su Hui in the form of a 29 by 29 grid of characters that can be read in at least 3,000 different ways.</li>
@@ -362,6 +374,7 @@
           case "dusk":
             $(".rainbow").css("opacity", 0);
             $(".dark").css("opacity", 1);
+            
             break;
 
           case "sunset":

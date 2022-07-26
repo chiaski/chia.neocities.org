@@ -110,15 +110,15 @@ body {
   transition: background 2s linear;
 
   background: linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 1) 8%, rgba(208, 222, 33, 1) 16%, rgba(79, 220, 74, 1) 24%, rgba(63, 218, 216, 1) 32%, rgba(47, 201, 226, 1) 40%, rgba(28, 127, 238, 1) 48%, rgba(95, 21, 242, 1) 56%, rgba(186, 12, 248, 1) 64%, rgba(251, 7, 217, 1) 72%, rgba(255, 0, 0, 1) 88%, rgba(255, 0, 0, 1) 100%, );
-  
+
   @media screen and (max-width: 800px) {
     padding: 1.5em;
-  font-size: .8em;
+    font-size: .8em;
   }
 }
 
 main {
-  
+
   max-width: 85vw;
 
   //font-family: adobe-text-pro, serif;
@@ -139,16 +139,21 @@ main {
   }
 }
 
+#nav{
+  a{
+    font-size: 6em;
+  }
+}
 
-a{
-//      transition: all .2s cubic-bezier(.17, .67, .64, .25);
+
+a {
   text-decoration: none;
   color: blue;
   opacity: $soft;
 }
 
-a:hover{
-  animation: $rainbow-link;
+a:hover {
+//  animation: $rainbow-link;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
 
@@ -156,15 +161,13 @@ a:hover{
 
   display: flex;
   //  justify-content: center;
-  align-items: center;
   min-height: 100vh;
-    padding-bottom: 20vh;
-box-sizing: border-box;
-  
+  box-sizing: border-box;
+
   #url {
     overflow: hidden;
-    
-    #_go{
+
+    #_go {
       display: none;
       opacity: $softer;
     }
@@ -174,8 +177,8 @@ box-sizing: border-box;
     padding: 1em 0;
     vertical-align: text-top;
 
-    
-    strong{
+
+    strong {
       font-weight: normal;
     }
 
@@ -190,30 +193,35 @@ box-sizing: border-box;
 
     td._domain {
       min-width: 190px;
-      
+
       a {
-        opacity: $softer;
+        //        opacity: $softer;
         text-decoration: none;
       }
-      
-  @media screen and (max-width: 800px) {
-    min-width: 155px;
+
+      @media screen and (max-width: 800px) {
+        min-width: 155px;
       }
 
     }
 
 
-      a._unavailable {
-        opacity: 0.4;
-      }
+    a._unavailable {
+      opacity: 0.4;
+    }
+
     td#_website {
       //      background: $link;
     }
 
     tr._url {
       margin: 0;
-      font-size: 2.9em;
+      font-size: 3em;
+      letter-spacing: -1px;
+      line-height: 150%;
       max-width: none;
+//      font-family: $serif;
+      font-weight: normal;
     }
 
     tr._desc td {
@@ -229,6 +237,7 @@ box-sizing: border-box;
     }
 
     td._neocities {
+      display: block;
       opacity: 0;
       transition: all .4s cubic-bezier(.17, .67, .64, .25);
       transition-delay: .3s;
@@ -238,16 +247,14 @@ box-sizing: border-box;
       color: $link;
       text-decoration: none;
       opacity: 1;
-//      text-shadow: 0 0 8px $link;
+      //      text-shadow: 0 0 8px $link;
       line-height: 140%;
       transition: all .3s cubic-bezier(.17, .67, .64, .25);
     }
 
     a:hover {
       cursor: pointer;
-      text-shadow: 0 0 6px blue;
       color: blue;
-      padding-left: .5em;
       animation: none;
     }
 
@@ -261,16 +268,17 @@ box-sizing: border-box;
 
   @media screen and (max-width: 800px) {
 
-    
+
     align-items: flex-start;
-    
+
     td {
       font-size: .9em;
-      
-      a{
+      letter-spacing: 0;
+
+      a {
         margin-bottom: .25em;
       }
-      
+
     }
 
     td._www {
@@ -278,7 +286,7 @@ box-sizing: border-box;
     }
 
     td#_website {
-      padding-right:1.25em;
+      padding-right: 1.25em;
     }
 
     #url tr._url {
@@ -295,36 +303,43 @@ box-sizing: border-box;
 }
 
 #p {
-  
+
   max-width: 80vw;
-  
+
   a {
     display: inline-block;
     width: 240px;
-    transition: all 1.2s cubic-bezier(.17, .67, .64, .25);
     margin: 1em 0;
     margin-right: 1.75em;
+    padding-right: .5em;
+    color: $t;
+    opacity: 1;
 
     strong {
       font-weight: normal;
       font-family: $serif;
-      opacity: 0.6;
+      opacity: 0.8;
     }
-    
-    .url{
-display: block;
-    padding-bottom: .25em;
+
+    .url {
+      display: block;
+      padding-bottom: .25em;
       text-decoration: underline;
+  transition: color linear 0.2s;
     }
-    
-    .url::before{
+
+    .url {
+      color: blue;
+    }
+
+    .url::before {
       content: "https://";
     }
 
     h2 {
       font-size: 2em;
       letter-spacing: -1px;
-      opacity: 0.8;
+      opacity: 1;
       line-height: 110%;
     }
 
@@ -340,19 +355,19 @@ display: block;
 
   a:hover {
     cursor: pointer;
-
-    h2,
-    strong {
-      animation: $rainbow-link;
-
+opacity: 1;
+    
+    .url{
+      color: $link;
     }
+    
   }
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 3.2em;
   line-height: 100%;
-  letter-spacing: -1.5px;
+  letter-spacing: -1px;
   display: inline-block;
   margin-left: -.05em;
 }
@@ -363,7 +378,8 @@ p {
   line-height: 140%;
 }
 
-ol, ul{
+ol,
+ul {
   padding: .25em .75em;
   opacity: $softer;
 }
@@ -394,6 +410,9 @@ li {
   h1 {
     font-size: 3em;
   }
+  .__dusk {
+    display: none !important;
+  }
 }
 
 // love
@@ -410,61 +429,81 @@ table.love {
   td._desc {
     opacity: $softer;
   }
-  
-  p{
+
+  p {
     width: 320px;
     max-width: 50%;
   }
-  
+
 }
 
-.newsletter{
-  
-  input{
+.newsletter {
+
+  input {
     padding: .25em;
     background: transparent;
     border: 1px solid $t;
-  font-family: $sans-serif;
+    font-family: $sans-serif;
     letter-spacing: -.25px;
+    color: $t;
   }
-  
-  input[type='submit']{
+
+  input[type='submit'] {
+    background: none;
+    border: 0;
     cursor: pointer;
-  transition: all linear 0.2s;
+    transition: all linear 0.2s;
   }
-  
-  input[type='submit']:hover{
-    opacity: $softer;
-    background: blue;
-    border: blue 1px solid ;
-    box-shadow: 0 0 8px blue;
-    color: #fff;
+
+  input[type='submit']:hover {
+    animation: $rainbow-link;
   }
-  
+
 }
 
-#love{
+#love {
   display: flex;
   flex-wrap: wrap;
   max-width: 80%;
-  
-  span{
+
+  span {
     display: inline-block;
     padding: .25em 0;
     padding-right: 1.5em;
     opacity: $softer;
-      transition: all .3s ease;
+    transition: all .3s ease;
+  }
+
+  span:hover {
+    color: $link;
+    //    text-shadow: 0 0 8px $link;
+    opacity: 1;
+    cursor: all-scroll;
+  }
+
+}
+
+.nav{
+  width: 100%;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  
+  a{
+    font-size: 1em;
+    color: $t;
+    opacity: 1;
   }
   
-  span:hover{
-    color: $link;
-    text-shadow: 0 0 8px $link;
-    opacity: 1;
+  select{
+    border: 0;
+    font-size: 1em;
     cursor: pointer;
+    background: none;
   }
   
 }
-
 
 //links
 #links {
@@ -475,8 +514,8 @@ table.love {
   box-sizing: border-box;
   padding: 3em;
   display: flex;
-  
-  strong{
+
+  strong {
     font-weight: normal;
   }
 
@@ -491,9 +530,9 @@ table.love {
       opacity: $softer;
     }
   }
-  
 
-  
+
+
   ._link {
     padding-right: 40px;
 
@@ -505,29 +544,28 @@ table.love {
 
   }
 
-  
 
-    strong {
-      display: block;
-      margin-bottom: .5em;
-    }
-  
-    a {
-      text-decoration: none;
-      display: block;
-      color: $t;
-      opacity: $soft;
-      line-height: 140%;
-    }
 
-    a:hover {
-      opacity: 1;
-      cursor: pointer;
-      color: blue;
-    }
-  
+  strong {
+    display: block;
+    margin-bottom: .5em;
+  }
+
+  a {
+    text-decoration: none;
+    display: block;
+    color: $t;
+    opacity: $soft;
+    line-height: 140%;
+  }
+
+  a:hover {
+    opacity: 1;
+    cursor: pointer;
+    color: blue;
+  }
+
   @media screen and (max-width: 800px) {
-
     position: absolute;
     box-sizing: border-box;
     padding: 2em;
@@ -537,24 +575,25 @@ table.love {
     ._link {
       padding-right: 10px;
     }
-    
-  ._link._information {
-    width: 40vw;
-    }
 
+    ._link._information {
+      width: 40vw;
+    }
   }
 }
 
 
 .serif {
   font-family: $serif;
-  font-size: 1.1em;
+  font-size: 1.15em;
 }
 
 .bg {
   position: fixed;
   height: 150vh;
   width: 100vw;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0); 
   top: 0;
   left: 0;
   overflow: hidden;
@@ -566,16 +605,52 @@ table.love {
   background: linear-gradient(180deg, rgba(230, 233, 233, 1) 0%, rgba(230, 233, 233, 1) 30%, rgba(230, 233, 233, 0.5) 100%);
   //background: rgb(221,198,209);
   //  background: linear-gradient(-180deg, rgba(221,198,209,1) 0%, rgba(221,198,209,0.5) 90%, rgba(221,198,209,0) 100%);
+  
+  @media screen and (max-width: 800px) {
+    
+    top: auto;
+    bottom: -50vh;
+  height: 180vh;
+    
+  }
 }
 
-#NOTFOUND{
+.welcome{
+  position: fixed;
+  height: 200vh;
+  width: 100vw;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0); 
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99;
+  animation: bye .5s;
+  animation-fill-mode: forwards;
+  animation-delay: .5s;
+  animation-iteration-count: 1;
+    background: linear-gradient(-180deg, rgb(208, 69, 69) 0%, rgb(226, 164, 70) 8%, rgb(194, 203, 90) 16%, rgb(155, 195, 154) 24%, rgb(137, 190, 189) 32%, rgb(123, 184, 195) 40%, rgb(126, 160, 199) 48%, rgb(161, 135, 212) 56%, rgb(191, 136, 211) 64%, rgba(251, 7, 217, 1) 72%, rgb(217, 148, 148) 88%, rgb(214, 159, 159) 100%);
+}
+
+@keyframes bye{
+  0%{
+    opacity: $soft;
+  }
+  100%{
+    display: none;
+    opacity: 0;
+  }
+}
+
+
+#NOTFOUND {
   position: absolute;
   right: 0;
   top: 2vh;
   cursor: all-scroll;
 }
 
-.dark{
+.dark {
   position: fixed;
   top: 0;
   left: 0;
@@ -585,6 +660,7 @@ table.love {
   z-index: 999;
   pointer-events: none;
   mix-blend-mode: color;
+  background-blend-mode: color;
   transition: opacity linear 0.4s;
   opacity: 0;
 }
@@ -596,18 +672,13 @@ table.love {
   top: 0;
   left: 0;
   z-index: -1;
-
   width: 100%;
   height: 100%;
   pointer-events: none;
   opacity: 0;
-//  display: none;
   transition: opacity linear 0.4s;
-
-
   background: #fff;
 }
-
 
 
 

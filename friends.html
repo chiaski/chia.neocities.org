@@ -13,23 +13,23 @@
   
   <style type="text/css">
     ._filters button{
-      border: 1px solid #17171a;
+      border: 0;
       background: none;
-      padding: .25em .5em;
+      padding: .25em 0;
       
-      border-radius: 8px;
       opacity: 0.8;
+      margin-right: 1em;
+      font-size: 1.85em;
       
       color: #17171a;
+      transition: all .2s cubic-bezier(.17, .67, .64, .25);
       
     }
     
     ._filters button:hover{
       cursor: pointer;
       color: #DF7EEA;
-      border: 1px solid #DF7EEA;
       opacity: 1;
-      box-shadow: 0 0 6px #DF7EEA;
       text-shadow: 0 0 36px #DF7EEA;
     }
     
@@ -45,140 +45,159 @@
     <div class="_r"></div>
   </div>
 
+  <div class="welcome"></div>
   <div class="dark"></div>
   <div class="bg"></div>
 
-    <img src="notfound.png" id="NOTFOUND">
-
+  <section class="nav">
+    <div>www.</div>
+    <div class="_domain"><a href="index.html">chia.neocities.org</a></div>
+    <div class="_page">
+      <select onchange="if (this.value) window.location.href=this.value">
+        <option value="friends.html">/friends.html</option>
+        <option value="index.html">/index.html</option>
+        <option value="about.html">/about.html</option>
+      </select>
+    </div>
+  </section>
   
-  <main><div class="spacer" style="height: 5vh"></div>
-    
-    <a href="https://chia.neocities.org">Back to index.html
-    </a>
-    <br>
-    
-    <h1>People</h1>
+  <section id="hi" style="min-height: 5vh;">
+  
+  </section>
+
+  <main>
     <p>Their websites... there are also so many without websites. Soon I will write about how much I love all of them. </p>
-    
-    <p>WEBRING OCMING SOON</p>
+
     
     <p>I like having friends... please feel free to <a href="mailto:hotemogirlfriend@gmail.com">email/text</a> me if u would like to join! and we can text and hang and our websites can kiss </p>
     
     
-    <div class="_filters">
-    <button>Friends</button>
-    <button>Internet</button>
-    <button>Mentors</button>
-    </div>
     
     <div class="_friends" id="p">
       
-    <a href="https://bianca.digital" target="_blank">
+    <a data-tag="friends" href="https://bianca.digital" target="_blank">
       <h2><span class="serif">bianca</span></h2>
       <span class="url">bianca.digital</span> i love bianca so much and one day i want to own a nice little publishing press with her
     </a>
       
-    <a href="https://twitter.com/Mwahahannah" target="_blank">
+    <a data-tag="friends" href="https://twitter.com/Mwahahannah" target="_blank">
       <h2><span class="serif">alannah</span></h2>
       <span class="url">twitter.com/Mwahahannah</span>
       alannah and i are going to destroy the philippine graphic design industry in a good way
     </a>
       
-    <a href="https://moiras.cargo.site/" target="_blank">
+    <a data-tag="friends" href="https://moiras.cargo.site/" target="_blank">
       <h2><span class="serif">moo</span></h2>
       <span class="url">moiras.cargo.site</span>
       moira drew my fursona for me 
     </a>
       
-    <a href="https://hellocarmen.cargo.site/" target="_blank">
+    <a data-tag="friends" href="https://hellocarmen.cargo.site/" target="_blank">
       <h2><span class="serif">carmen</span></h2>
       <span class="url">hellocarmen.cargo.site</span>
       carmen is the goth gf to my emo gf
     </a>
       
-    <a href="https://twitter.com/tinyeggie" target="_blank">
+    <a data-tag="friends" href="https://twitter.com/tinyeggie" target="_blank">
       <h2><span class="serif">gabbey</span></h2>
       <span class="url">twitter.com/tinyeggie</span> gabby once drew me kuzupeko comic.. actually several times,
     </a>
       
-    <a href="https://twitter.com/scaIeshade" target="_blank">
+    <a data-tag="friends" href="https://twitter.com/scaIeshade" target="_blank">
       <h2><span class="serif">ashe</span></h2>
       <span class="url">twitter.com/scaIeshades</span> one time they went over to my house when we were in middle school and we didnt speak a isngle word for hours, opting to type on skype instead, until my mom ordered us shakey's
     </a>
       
-    <a href="https://kaloyankolev.com" target="_blank">
+    <a data-tag="friends" href="https://kaloyankolev.com" target="_blank">
       <h2><span class="serif">kalo</span></h2>
       <span class="url">kaloyankolev.com</span>
       kalo copied my resume but at least he asked. he might be my 2nd favorite he/him right now
     </a>
       
-    <a href="htthttps://321nothanks.neocities.org/" target="_blank">
+    <a data-tag="friends" href="htthttps://321nothanks.neocities.org/" target="_blank">
       <h2><span class="serif">chloe</span></h2>
       <span class="url">321nothanks.neocities.org</span>
       i love chloe
     </a>
       
-    <a href="https://kevinnchen.com/" target="_blank">
+    <a data-tag="friends" href="https://kevinnchen.com/" target="_blank">
       <h2><span class="serif">kevin</span></h2>
       <span class="url">kevinnchen.com</span>
       i love kevin. he helped me move my couch and my crt and printed me fake wristbands for spring fling. in return i tell him that i think i am an evil person
     </a>
       
-    <a href="https://bricebai.com/" target="_blank">
+    <a data-tag="friends" href="https://bricebai.com/" target="_blank">
       <h2><span class="serif">brice</span></h2>
       <span class="url">bricebai.com</span>
       brice and i bonded over pacthesis dating sims
     </a>
       
-    <a href="https://katelivewirebio.glitch.me/" target="_blank">
+    <a data-tag="friends" href="https://katelivewirebio.glitch.me/" target="_blank">
       <h2><span class="serif">kate</span></h2>
       <span class="url">katelivewirebio.glitch.me</span>
       one of my favorite people ive met through developh...
     </a>
       
-    <a href="https://jake-advincula.super.site/" target="_blank">
+    <a data-tag="friends" href="https://jingyingwang.github.io/" target="_blank">
+      <h2><span class="serif">jean</span></h2>
+      <span class="url">jingyingwang.github.io</span>
+      i brought vodka to jean's birthday at the soccer house and there were pokemon plates 
+    </a>
+      
+    <a data-tag="friends" href="https://jake-advincula.super.site/" target="_blank">
       <h2><span class="serif">jake</span></h2>
-      <span class="url">jake-advincuka.super.site</span>
+      <span class="url">jake-advincula.super.site</span>
       insanely curious and talented 
     </a>
       
-    <a href="https://rence.la" target="_blank">
+    <a data-tag="friends" href="https://jake.chvatal.com/" target="_blank">
+      <h2><span class="serif">jake</span></h2>
+      <span class="url">jake-chvatal.com</span>
+jake is very cool but i have not met him in real life yet
+    </a>
+      
+    <a data-tag="friends" href="https://sarahteng.squarespace.com/" target="_blank">
+      <h2><span class="serif">sarah</span></h2>
+      <span class="url">sarahteng.squarespace.com</span> i watched sarah fall down on the street after a car seat headrest concert 
+    </a>
+      
+    <a data-tag="friends" href="https://rence.la" target="_blank">
       <h2><span class="serif">lawrence</span></h2>
       <span class="url">rence.la</span>
       i love lawrence
     </a>
       
-    <a href="https://tobyshorin.com" target="_blank">
+    <a data-tag="friends" href="https://tobyshorin.com" target="_blank">
       <h2><span class="serif">toby</span></h2>
       <span class="url">tobyshorin.com</span>
       toby is kind of like my internet dad but i need to reply to him more
     </a>
       
-      
-    <a href="https://www.instagram.com/trstne" target="_blank">
+    <a data-tag="friends" href="https://www.instagram.com/trstne" target="_blank">
       <h2><span class="serif">tristen</span></h2>
       <span class="url">instagram.com/trstne</span>
       he doesn't have a website so im using his eboy instagram
     </a>
       
-    <a href="https://linktr.ee/noremi" target="_blank">
+    <a data-tag="friends" href="https://linktr.ee/noremi" target="_blank">
       <h2><span class="serif">sharon</span></h2>
       <span class="url">linktr.ee/noremi</span>a very talented musician.. i love..
     </a>
     <a href="http://knavehaven.net/" target="_blank">
       <h2><span class="serif">staoue</span></h2>
-      <span class="url">knavehaven.net</span>a very talented musician.. i love..
+      <span class="url">knavehaven.net</span>swagapino
     </a>
-    <a href="https://www.laurenhyelee.com/" target="_blank">
+    <a data-tag="friends" href="https://www.laurenhyelee.com/" target="_blank">
       <h2><span class="serif">lauren</span></h2>
       <span class="url">laurenhyelee.com</span>
+      lauren lieks animal collective and i like animal collective
     </a>
-    <a href="https://www.harryisaac.com/" target="_blank">
+    <a data-tag="friends" href="https://www.harryisaac.com/" target="_blank">
       <h2><span class="serif">harry</span></h2>
       <span class="url">harryisaac.com</span>
       harry sold me his ana roxanne tickets 
     </a>
-    <a href="https://www.eugenekudashev.com" target="_blank">
+    <a data-tag="friends" href="https://www.eugenekudashev.com" target="_blank">
       <h2><span class="serif">eugene</span></h2>
       <span class="url">eugenekudashev.com</span>
       eugene makes good jokes and websites 
@@ -190,11 +209,25 @@
     
     </div>
     
+    <div class="_filters">
+    <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSe87qOt30w2A6Mb1QDgfb-Isksyxma4ALo0Ihyb-tBLRXTHCA/viewform?usp=sf_link', '_blank')">Be a website friend</button>
+    </div>
     
-    <div class="spacer" style="height: 5vh"></div>
-    
-
+    <div class="spacer" style="height: 10vh"></div>
   </main>
+  
+  <section class="nav">
+    <div>www.</div>
+    <div class="_domain"><a href="index.html">chia.neocities.org</a></div>
+    <div class="_page">
+      <select onchange="if (this.value) window.location.href=this.value">
+        <option value="friends.html">/friends.html</option>
+        <option value="index.html">/index.html</option>
+        <option value="about.html">/about.html</option>
+      </select>
+    </div>
+  </section>
+  
   <script src="jquery.min.js" type="text/javascript"></script>
   <script src="masonry.pkgd.min.js" type="text/javascript"></script>
   <script type="text/javascript">
