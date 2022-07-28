@@ -83,7 +83,7 @@ p {
   mix-blend-mode: darken;
   transition: all linear 0.1s;
   width: 100%;
-  z-index: 999;
+  z-index: 88;
   pointer-events: none;
 
   ._r {
@@ -624,8 +624,6 @@ table.love {
   left: 0;
   pointer-events: none;
   z-index: 99;
-  
-  display: none;
   
   animation: bye .5s;
   animation-fill-mode: forwards;

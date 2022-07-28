@@ -65,7 +65,7 @@ p {
   mix-blend-mode: darken;
   transition: all linear 0.1s;
   width: 100%;
-  z-index: 999;
+  z-index: 88;
   pointer-events: none;
 }
 .progress ._r {
@@ -492,7 +492,6 @@ table.love p {
   left: 0;
   pointer-events: none;
   z-index: 99;
-  display: none;
   animation: bye 0.5s;
   animation-fill-mode: forwards;
   animation-delay: 0.5s;
